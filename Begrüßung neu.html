@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="greetingBox"></div>
+  <script>
+    const user = "Kolleg*innen";
+    const now = new Date();
+    const hour = now.getHours();
+    const days = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
+    const months = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+    const greeting = hour < 12 ? "Guten Morgen" : hour < 17 ? "Guten Tag" : "Guten Abend";
+    const dateStr = `${days[now.getDay()]}, der ${now.getDate()}. ${months[now.getMonth()]} ${now.getFullYear()}`;
+    document.getElementById("greetingBox").innerText = `${greeting}, ${user}! Heute ist ${dateStr}`;
+  </script>
+</body>
+</html>
