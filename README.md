@@ -1,2 +1,0 @@
-# Begrue-ung
-Sharepoint-Begrüßung
